@@ -1,0 +1,24 @@
+#header {
+    text-align: center;
+    display: inline;
+}
+
+#latex_input_container {
+    float: left;
+    width: 50%;
+}
+
+#latex_input {
+    width: 100%;
+    height: 70%;
+}
+
+#latex_display_container {
+    float: right;
+    width: 50%;
+}
+
+#latex_display {
+    width: 100%;
+    text-align: center;
+}
