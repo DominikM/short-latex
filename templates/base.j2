@@ -1,0 +1,26 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/latex.css') }}">
+    <script type="text/javascript"
+	    src="{{ url_for('static', filename='js/jquery-3.1.1.js') }}"></script>
+    <title>Latex</title>
+</head>
+
+<body>
+    {% block content %}{% endblock %}
+
+    <script type="text/javascript">
+     var page_data = {{ page_data|safe }};
+    </script>
+
+    <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+	 "HTML-CSS": {scale: 150}
+     });
+    </script>
+
+    <script type="text/javascript"
+	    src="{{ url_for('static', filename='MathJax/MathJax.js', config='TeX-AMS_HTML') }}"></script>
+    
+    <script type="text/javascript" src="{{ url_for('static', filename='js/latex_producer.js') }}"></script>
+    
+</body>
