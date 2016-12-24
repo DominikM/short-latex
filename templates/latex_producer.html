@@ -1,0 +1,36 @@
+<head>
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/latex.css') }}">
+  <script type="text/javascript"
+	  src="{{ url_for('static', filename='MathJax/MathJax.js', config='TeX-MML-AM_CHTML') }}"></script>
+  <script type="text/javascript"
+	  src="{{ url_for('static', filename='js/jquery-3.1.1.js') }}"></script>
+  <title>Latex</title>
+</head>
+
+<body>
+  <div id="header"><h1>Simple Latex Maker</h1></div>
+
+  <div id="latex_input_container">
+    <textarea id="latex_input" onkeyup="update_latex()"></textarea>
+    <div id="latex_util_container">
+      <div id="latex_buttons_container">
+	<button onclick="save_latex()">Save</button>
+      </div>
+      <div id="latex_url_container">
+      </div>
+    </div>
+  </div>
+  
+  <div id="latex_display_container">
+    <p id="latex_display">$${}$$</p>
+  </div>
+
+  <script type="text/javascript">
+    var page_data = {{ page_data|safe }};
+  </script>
+  
+  <script type="text/javascript" src="{{ url_for('static', filename='js/latex_producer.js') }}"></script>
+  
+</body>
+
+
