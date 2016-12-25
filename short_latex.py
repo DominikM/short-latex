@@ -7,8 +7,11 @@
 from flask import Flask, render_template, request, jsonify, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy
 from uuid import uuid4
+
+base_dir = dir_path = os.path.dirname(os.path.realpath(__file__))
+
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/dominikm/Coding/Projects/short-latex/short_latex.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + base_dir + '/short_latex.db'
 db = SQLAlchemy(app)
 
 class Latex(db.Model):
