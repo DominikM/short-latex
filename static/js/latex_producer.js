@@ -18,6 +18,7 @@ function save_latex() {
 	function (data) {
 	    if (data.result == 'success') {
 		var url_cont = document.getElementById('latex_url_container');
+		url_cont.innerHTML = '';
 		
 		var url_p = document.createElement('p');
 		var url_input = document.createElement('input');
